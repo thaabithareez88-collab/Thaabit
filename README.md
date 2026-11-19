@@ -1,70 +1,89 @@
+
 # Inventory Management System
 
-## 1. Project Overview
-The Inventory Management System is a Python-based desktop application designed to manage products, monitor stock levels, maintain inventory records and generate inventory reports.
+A Python-based desktop application for managing products, inventory, stock movements and reports.
 
-The system uses an SQLite database to store and manage product information and stock transactions.
-
-## 2. Project Objectives
-- Manage product information.
-- Monitor stock availability.
-- Record stock additions and reductions.
-- Identify low-stock products.
-- Maintain inventory transaction history.
-- Generate inventory reports.
-
-## 3. Technologies Used
-- Programming Language: Python
-- User Interface: CustomTkinter
-- Database: SQLite
-- Database Connectivity: Python sqlite3
-- Development Environment: Visual Studio Code
-- Version Control: GitHub
-
-## 4. Main Features
+## Features
 
 ### Dashboard
-- Total products
+- Total product count
 - Total stock quantity
-- Low-stock products
-- Total inventory value
+- Inventory value
+- Low-stock item count
 
 ### Product Management
 - Add products
+- Search products
 - Update product details
 - Delete products
-- Search products
 
 ### Stock Management
-- Add stock
-- Reduce stock
-- Monitor stock quantities
-- Low-stock alerts
+- Record stock received (Stock In)
+- Record stock issued (Stock Out)
+- View stock transaction history
+- Identify low-stock products
+- Prevent stock removal when quantity is insufficient
 
-### Inventory Reports
-- Product reports
-- Stock reports
-- Inventory value reports
-- Transaction history
+### Reports
+- Product Report
+- Stock Report
+- Transaction Report
 
-## 5. Database
-The application uses SQLite to store product details, categories and stock transactions.
+## Technologies Used
 
-## 6. Project Structure
-The project is organised into separate modules for the user interface, database connectivity, product management, stock management and reporting.
+- Python
+- CustomTkinter
+- SQLite
+- Pandas
+- Matplotlib
 
-## 7. Installation
-Install the required dependencies:
+## Project Structure
 
-`pip install -r requirements.txt`
+```text
+Inventory-Management-System/
+│
+├── assets/
+├── database/
+├── src/
+│   ├── database.py
+│   ├── main.py
+│   ├── products.py
+│   ├── reports.py
+│   ├── stock.py
+│   ├── ui.py
+│   ├── test_products.py
+│   ├── test_stock.py
+│   └── test_reports.py
+│
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
 
-## 8. How to Run
-Run the main application:
+## Installation
 
-`python src/main.py`
+1. Clone or download this repository.
+2. Install Python.
+3. Install the required packages:
 
-## 9. Future Improvements
-- Export reports to PDF and Excel.
-- Barcode scanning.
-- User login and authentication.
-- Supplier management.
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+Run the following command from the project root:
+
+```bash
+python src/main.py
+```
+
+## Database
+
+The application uses SQLite to store inventory and transaction information.
+
+The database is created locally when the application initializes.
+
+## Project Status
+
+Version 1.0 – Core inventory management features implemented and tested.
