@@ -1,24 +1,25 @@
+
 # Python cache
 __pycache__/
 *.py[cod]
 
 # Virtual environment
+.venv/
 venv/
-.env/
+
+# IDE settings
+.idea/
 
 # Database files
 *.db
 *.sqlite
 *.sqlite3
 
-# IDE
-.vscode/
-.idea/
-
 # Build files
 build/
 dist/
 *.spec
 
-# Executables
-*.exe
+# Operating system files
+.DS_Store
+Thumbs.db
